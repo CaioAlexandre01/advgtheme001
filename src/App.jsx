@@ -92,7 +92,7 @@ function App() {
             </motion.div>
           </nav>
         </header>
-        <div className="flex flex-col items-center justify-center text-center h-[40rem]">
+        <div className="flex flex-col items-center justify-center text-center h-[38rem]">
           <div className="p-2 mt-10">
             <div className="bg-black bg-opacity-65 p-3 rounded-2xl">
               <h1 className="text-3xl font-semibold text-slate-100 mb-2">Dra. Maria Silva</h1>
@@ -115,7 +115,7 @@ function App() {
             </defs>
           </svg>
 
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 pt-10">
             <h2 className="text-2xl font-semibold text-white mb-8">O que dizem nossos clientes</h2>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-[#242A33] p-6 rounded-lg shadow-xl mt-8">
