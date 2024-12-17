@@ -18,9 +18,27 @@ function TestimonialSection() {
   ];
 
   return (
-    <section id="testemunhos" className="py-16 bg-[#2C333C] text-center">
+    <section id="testemunhos" className="relative py-16 bg-[#2C333C] text-center">
+      {/* Forma de onda no container pai */}
+      <svg
+        className="absolute top-0 left-0 w-full transform -translate-y-1/4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="url(#wave-gradient)"
+          d="M0,128L48,138.7C96,149,192,171,288,176C384,181,480,171,576,144C672,117,768,75,864,64C960,53,1056,75,1152,96C1248,117,1344,139,1392,150.7L1440,162V0H1392C1344,0,1248,0,1152,0C1056,0,960,0,864,21.3C768,42,672,85,576,128C480,171,384,213,288,224C192,235,96,213,48,192L0,170Z"
+        ></path>
+        <defs>
+          <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#1F252D" />
+            <stop offset="100%" stopColor="#3B4C61" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-semibold mb-8">O que dizem nossos clientes</h2>
+        <h2 className="text-2xl font-semibold text-white mb-8">O que dizem nossos clientes</h2>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-[#242A33] p-6 rounded-lg shadow-xl mt-8">
             <p className="text-gray-300 italic mb-4">{testimonial.text}</p>

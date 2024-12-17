@@ -42,11 +42,11 @@ function Header() {
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
           <div className="text-center">
-            <a href="#especialidades" className="block text-gray-700 py-2 px-4 hover:text-gold">
-              Especialidades
-            </a>
             <a href="#testemunhos" className="block text-gray-700 py-2 px-4 hover:text-gold">
               Testemunhos
+            </a>
+            <a href="#faq" className="block text-gray-700 py-2 px-4 hover:text-gold">
+              Perguntas frequentes
             </a>
             <a href="#contato" className="block text-gray-700 py-2 px-4 hover:text-gold">
               Contato

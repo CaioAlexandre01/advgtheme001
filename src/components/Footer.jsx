@@ -26,8 +26,8 @@ function Footer() {
         </div>
       <div className="container mx-auto px-4 text-center">
         <p className="text-lg text-gray-400">© 2024 Maria Silva - Advogada</p>
-        <p className="text-sm text-gray-500">Rua Exemplo, 123 - São Paulo - SP</p>
-        <p className="text-sm text-gray-500">Contato: (11) 98765-4321</p>
+        <p className="text-sm text-gray-500">Rua xxx, 000 - Campos dos Goytacazes - RJ</p>
+        <p className="text-sm text-gray-500">Contato: (22) 99999-9999</p>
       </div>
     </footer>
   );

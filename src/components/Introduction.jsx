@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function Introduction() {
   return (
-    <div className="flex flex-col items-center justify-center text-center py-[12.7rem]">
+    <div className="flex flex-col items-center justify-center text-center h-[40rem]">
       <div className="p-2 mt-10">
         <div className="bg-black bg-opacity-65 p-3 rounded-2xl">
           <h1 className="text-3xl font-semibold text-slate-100 mb-2">Dra. Maria Silva</h1>
