@@ -20,7 +20,7 @@ function TestimonialSection() {
   return (
     <section id="testemunhos" className="py-16 bg-[#2C333C] text-center">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-semibold text-gold mb-8">O que dizem nossos clientes</h2>
+        <h2 className="text-2xl font-semibold mb-8">O que dizem nossos clientes</h2>
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-[#242A33] p-6 rounded-lg shadow-xl mt-8">
             <p className="text-gray-300 italic mb-4">{testimonial.text}</p>

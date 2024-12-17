@@ -3,12 +3,13 @@ import Header from "./components/Header";
 import Introduction from "./components/Introduction";
 import TestimonialSection from "./components/TestimonialSection";
 import ContactSection from "./components/ContactSection";
+import FAQSection from "./components/FaqSection";
 import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
   return (
-    <div className="min-h-screen w-screen text-white relative">
+    <div className="w-screen text-white relative">
       <div
         className="absolute top-0 left-0 right-0 bottom-0 z-10"
         style={{
@@ -17,6 +18,7 @@ function App() {
           backgroundPosition: "center",
           backgroundAttachment: "fixed",
           filter: "brightness(70%)",
+          height: "100vh",
         }}
       ></div>
 
@@ -25,6 +27,7 @@ function App() {
         <Introduction />
         <TestimonialSection />
         <ContactSection />
+        <FAQSection />
         <Footer />
       </div>
     </div>
