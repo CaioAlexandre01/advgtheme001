@@ -38,66 +38,65 @@ function App() {
   return (
     <div className="w-screen text-white">
       <div>
-      <header className="w-screen bg-[#1C2129] text-center fixed z-50">
-  <nav className="bg-transparent text-slate-100 shadow-lg py-3">
-    <div className="container mx-auto px-8 flex items-center justify-between">
-      <img src={logo} alt="Logo" className="rounded-full h-12 bg-transparent" /> {/* Logo com altura reduzida */}
-      
-      {/* Botão de menu mobile */}
-      <div className="lg:hidden" onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? <FaTimes className="text-gold text-3xl" /> : <FaBars className="text-gold text-3xl" />}
-      </div>
+        <header className="w-screen bg-[#1C2129] text-center fixed z-50">
+          <nav className="bg-transparent text-slate-100 shadow-lg py-3">
+            <div className="container mx-auto px-6 flex items-center justify-between">
+              <img src={logo} alt="Logo" className="rounded-full h-12 bg-transparent" /> {/* Logo com altura reduzida */}
+              {/* Botão de menu mobile */}
+              <div className="lg:hidden" onClick={toggleMobileMenu}>
+                {isMobileMenuOpen ? <FaTimes className="text-gold text-3xl" /> : <FaBars className="text-gold text-3xl" />}
+              </div>
+              {/* Menu para dispositivos grandes */}
+              <div className="hidden lg:flex space-x-6">
+                <a href="#especialidades" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Especialidades
+                </a>
+                <a href="#testemunhos" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Testemunhos
+                </a>
+                <a href="#contato" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Contato
+                </a>
+              </div>
+            </div>
 
-      {/* Menu para dispositivos grandes */}
-      <div className="hidden lg:flex space-x-6">
-        <a href="#especialidades" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Especialidades
-        </a>
-        <a href="#testemunhos" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Testemunhos
-        </a>
-        <a href="#contato" className="text-gray-400 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Contato
-        </a>
-      </div>
-    </div>
-
-    {/* Menu mobile */}
-    <motion.div
-      className={`lg:hidden bg-slate-100 rounded-lg py-4 mt-2 shadow-2xl ${isMobileMenuOpen ? "block" : "hidden"}`} // Controle da visibilidade do menu
-      initial={{ opacity: 0, y: 10 }}
-      animate={{
-        opacity: isMobileMenuOpen ? 1 : 0,
-        y: isMobileMenuOpen ? 0 : 10,
-      }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-    >
-      <div className="text-center">
-        <a href="#testemunhos" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Testemunhos
-        </a>
-        <a href="#faq" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Perguntas frequentes
-        </a>
-        <a href="#contato" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
-          Contato
-        </a>
-      </div>
-    </motion.div>
-  </nav>
-</header>
-
+            {/* Menu mobile */}
+            <motion.div
+              className={`lg:hidden bg-slate-100 rounded-lg py-4 mt-2 shadow-2xl ${isMobileMenuOpen ? "block" : "hidden"}`} // Controle da visibilidade do menu
+              initial={{ opacity: 0, y: 10 }}
+              animate={{
+                opacity: isMobileMenuOpen ? 1 : 0,
+                y: isMobileMenuOpen ? 0 : 10,
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
+              <div className="text-center">
+                <a href="#testemunhos" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Testemunhos
+                </a>
+                <a href="#faq" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Perguntas frequentes
+                </a>
+                <a href="#contato" className="block text-gray-700 py-2 px-4 hover:text-gold" onClick={() => setIsMobileMenuOpen(false)}>
+                  Contato
+                </a>
+              </div>
+            </motion.div>
+          </nav>
+        </header>
 
         <div className="bg-cover bg-center h-auto relative" style={{ backgroundImage: `url('/background1.jpg')` }}>
           <div className="flex flex-col items-center justify-center text-center h-full bg-black bg-opacity-20">
-            <div className="h-screen flex flex-col justify-center m-3">
-              <div className="bg-black bg-opacity-65 p-3 rounded-2xl mt-20">
+            <div className="h-screen flex flex-col justify-center">
+              <div className="bg-black bg-opacity-65 p-3 rounded-2xl mt-28 mx-2">
                 <h1 className="text-3xl font-semibold text-slate-100 mb-2">Dra. Maria Silva</h1>
                 <p className="text-base text-slate-200">Especialista em Direito de Família e Sucessões, atuando em divórcios, guarda de filhos, heranças e planejamento sucessório.</p>
               </div>
-              <a href="https://wa.me/1234567890" className="bg-green-600 mt-2 text-white py-3 px-8 rounded-lg text-lg flex items-center justify-center gap-3 hover:bg-green-700 transition duration-300">
-                <FaWhatsapp className="text-2xl" /> Fale Comigo no WhatsApp
-              </a>
+              <div className="flex justify-center w-screen">
+                <a href="https://wa.me/1234567890" className="bg-green-600 mt-2 text-white py-2 w-80 rounded-lg text-lg flex items-center justify-center gap-3 hover:bg-green-700 transition duration-300">
+                  <FaWhatsapp className="text-2xl" /> Fale Comigo no WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -220,39 +219,38 @@ function App() {
         </section>
 
         <footer className="bg-[#171D29] py-16">
-  <div className="container mx-auto px-4 text-center">
-    {/* Redes Sociais */}
-    <div className="flex justify-center gap-8 mb-8">
-      <a href="https://www.facebook.com" className="text-blue-500 hover:text-blue-700 transition duration-300">
-        <FaFacebook className="text-4xl" />
-      </a>
-      <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700 transition duration-300">
-        <FaInstagram className="text-4xl" />
-      </a>
-      <a href="https://www.linkedin.com" className="text-blue-600 hover:text-blue-800 transition duration-300">
-        <FaLinkedin className="text-4xl" />
-      </a>
-      <a href="https://wa.me/1234567890" className="text-green-500 hover:text-green-700 transition duration-300">
-        <FaWhatsapp className="text-4xl" />
-      </a>
-    </div>
+          <div className="container mx-auto px-4 text-center">
+            {/* Redes Sociais */}
+            <div className="flex justify-center gap-8 mb-8">
+              <a href="https://www.facebook.com" className="text-blue-500 hover:text-blue-700 transition duration-300">
+                <FaFacebook className="text-4xl" />
+              </a>
+              <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700 transition duration-300">
+                <FaInstagram className="text-4xl" />
+              </a>
+              <a href="https://www.linkedin.com" className="text-blue-600 hover:text-blue-800 transition duration-300">
+                <FaLinkedin className="text-4xl" />
+              </a>
+              <a href="https://wa.me/1234567890" className="text-green-500 hover:text-green-700 transition duration-300">
+                <FaWhatsapp className="text-4xl" />
+              </a>
+            </div>
 
-    {/* Informações da Empresa */}
-    <div className="text-gray-400 mb-6">
-      <p className="text-lg font-semibold">Maria Silva - Advogada</p>
-      <p className="text-sm">CNPJ: 12.345.678/0001-99</p>
-      <p className="text-sm">Rua xxx, 000 - Campos dos Goytacazes - RJ</p>
-      <p className="text-sm">Telefone: (22) 99999-9999</p>
-      <p className="text-sm">E-mail: contato@mariasilva.com</p>
-    </div>
+            {/* Informações da Empresa */}
+            <div className="text-gray-400 mb-6">
+              <p className="text-lg font-semibold">Maria Silva - Advogada</p>
+              <p className="text-sm">CNPJ: 12.345.678/0001-99</p>
+              <p className="text-sm">Rua xxx, 000 - Campos dos Goytacazes - RJ</p>
+              <p className="text-sm">Telefone: (22) 99999-9999</p>
+              <p className="text-sm">E-mail: contato@mariasilva.com</p>
+            </div>
 
-    {/* Direitos Autorais */}
-    <div className="text-sm text-gray-500">
-      <p>© 2024 Maria Silva - Todos os direitos reservados.</p>
-    </div>
-  </div>
-</footer>
-
+            {/* Direitos Autorais */}
+            <div className="text-sm text-gray-500">
+              <p>© 2024 Maria Silva - Todos os direitos reservados.</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
