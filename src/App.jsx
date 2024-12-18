@@ -219,24 +219,40 @@ function App() {
           </div>
         </section>
 
-        <footer className="bg-[#171D29] py-8">
-          <div className="flex justify-center gap-8 mb-4">
-            <a href="https://www.facebook.com" className="text-blue-500 hover:text-blue-700 transition duration-300">
-              <FaFacebook className="text-3xl" />
-            </a>
-            <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700 transition duration-300">
-              <FaInstagram className="text-3xl" />
-            </a>
-            <a href="https://www.linkedin.com" className="text-blue-600 hover:text-blue-800 transition duration-300">
-              <FaLinkedin className="text-3xl" />
-            </a>
-          </div>
-          <div className="container mx-auto px-4 text-center">
-            <p className="text-lg text-gray-400">© 2024 Maria Silva - Advogada</p>
-            <p className="text-sm text-gray-500">Rua xxx, 000 - Campos dos Goytacazes - RJ</p>
-            <p className="text-sm text-gray-500">Contato: (22) 99999-9999</p>
-          </div>
-        </footer>
+        <footer className="bg-[#171D29] py-16">
+  <div className="container mx-auto px-4 text-center">
+    {/* Redes Sociais */}
+    <div className="flex justify-center gap-8 mb-8">
+      <a href="https://www.facebook.com" className="text-blue-500 hover:text-blue-700 transition duration-300">
+        <FaFacebook className="text-4xl" />
+      </a>
+      <a href="https://www.instagram.com" className="text-pink-500 hover:text-pink-700 transition duration-300">
+        <FaInstagram className="text-4xl" />
+      </a>
+      <a href="https://www.linkedin.com" className="text-blue-600 hover:text-blue-800 transition duration-300">
+        <FaLinkedin className="text-4xl" />
+      </a>
+      <a href="https://wa.me/1234567890" className="text-green-500 hover:text-green-700 transition duration-300">
+        <FaWhatsapp className="text-4xl" />
+      </a>
+    </div>
+
+    {/* Informações da Empresa */}
+    <div className="text-gray-400 mb-6">
+      <p className="text-lg font-semibold">Maria Silva - Advogada</p>
+      <p className="text-sm">CNPJ: 12.345.678/0001-99</p>
+      <p className="text-sm">Rua xxx, 000 - Campos dos Goytacazes - RJ</p>
+      <p className="text-sm">Telefone: (22) 99999-9999</p>
+      <p className="text-sm">E-mail: contato@mariasilva.com</p>
+    </div>
+
+    {/* Direitos Autorais */}
+    <div className="text-sm text-gray-500">
+      <p>© 2024 Maria Silva - Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
       </div>
     </div>
   );
