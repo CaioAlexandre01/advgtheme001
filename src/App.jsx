@@ -40,7 +40,7 @@ function App() {
       <div>
       <header className="w-screen bg-[#1C2129] text-center fixed z-50">
   <nav className="bg-transparent text-slate-100 shadow-lg py-3">
-    <div className="container mx-auto px-4 flex items-center justify-between">
+    <div className="container mx-auto px-8 flex items-center justify-between">
       <img src={logo} alt="Logo" className="rounded-full h-12 bg-transparent" /> {/* Logo com altura reduzida */}
       
       {/* Botão de menu mobile */}
